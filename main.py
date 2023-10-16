@@ -12,7 +12,7 @@ def main(page: ft.Page):
         home = ft.View(
             "/",
             [
-                ft.AppBar(title=ft.Text("Flet app"), bgcolor=ft.colors.SURFACE_VARIANT),
+                ft.AppBar(title=ft.Text("반부패 이해충돌 방지 자가진단 체크리스트"), bgcolor=ft.colors.SURFACE_VARIANT),
                 ft.ElevatedButton(
                     "수수금지 음식물 선물 경조사비 자가 진단 체크리스트",
                     width=500,
@@ -54,7 +54,12 @@ def main(page: ft.Page):
                     width=500,
                     on_click=lambda _: page.go("/present_check2"),
                 ),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
@@ -154,14 +159,11 @@ def main(page: ft.Page):
                     width=500,
                     on_click=lambda _: page.go("/present_check_exception"),
                 ),
-                ft.Markdown(
-                    """| 구분 | 가액범위 | 비고 |
-|------|-----|----------|
-| 음식물 | 3만원 이하 |  |
-| 선물 | 5만원 이하 | 단, 농산물, 농수산가공품은 명절(설날, 추석) 전 24일 부터 후 5일까지 20만원, 그 외 기간은 10만원 |
-| 경조사비 | 5만원 이하 | 화환, 조화의 경우 10만원 |""",
-                    extension_set=ft.MarkdownExtensionSet.GITHUB_WEB,
-                ),
+                ft.Text(
+                    """<가액범위> 
+- 음식물은 3만원 이하
+- 선물은 5만원 이하 (단, 농산물, 농수산가공품은 명절(설날, 추석) 전 24일 부터 후 5일까지 20만원, 그 외 기간은 10만원)
+- 경조사비는 5만원 이하(단, 화환, 조화의 경우 10만원)""", width=500),
                 ft.ElevatedButton(
                     "임직원의 친족(「민법」 제777조 기준)이 제공하는 음식물, 선물, 경조사비",
                     width=500,
@@ -206,7 +208,12 @@ def main(page: ft.Page):
             [
                 ft.AppBar(title=ft.Text("선물수수 허용"), bgcolor=ft.colors.SURFACE_VARIANT),
                 ft.Text("예외사유에 해당되어 선물수수가 가능합니다."),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
@@ -216,10 +223,14 @@ def main(page: ft.Page):
             [
                 ft.AppBar(title=ft.Text("선물수수 허용"), bgcolor=ft.colors.SURFACE_VARIANT),
                 ft.Text("직무관련성이 없는 1회 100만원 이하의 선물수수가 허용됩니다."),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-
         )
 
         present_declaration = ft.View(
@@ -227,13 +238,17 @@ def main(page: ft.Page):
             [
                 ft.AppBar(title=ft.Text("신고조치 필요"), bgcolor=ft.colors.SURFACE_VARIANT),
                 ft.Text("선물수수가 불가하여 신고 조치가 필요합니다."),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
 
-
-        ## 공식행사 체크리스트 추가 필요 
+        ## 공식행사 체크리스트 추가 필요
 
         preesent_routes = {
             "/present_check1": present_check1,
@@ -304,7 +319,12 @@ def main(page: ft.Page):
                 ft.ElevatedButton(
                     "해당없음", width=500, on_click=lambda _: page.go("/stakeholder_ok")
                 ),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
@@ -345,7 +365,12 @@ def main(page: ft.Page):
                 ft.ElevatedButton(
                     "해당없음", width=500, on_click=lambda _: page.go("/stakeholder_ok")
                 ),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
@@ -378,7 +403,12 @@ def main(page: ft.Page):
                     width=500,
                     on_click=lambda _: page.go("/stakeholder_check4"),
                 ),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
@@ -390,7 +420,6 @@ def main(page: ft.Page):
                     title=ft.Text("사적이해관계자 Checklist 4"),
                     bgcolor=ft.colors.SURFACE_VARIANT,
                 ),
-                
                 ft.Text("직무관련자가 아래 항목에 해당하나요?", width=500),
                 ft.ElevatedButton(
                     "공직자 또는 그 가족 (「민법」 제779조에 따른 가족을 말한다)",
@@ -445,7 +474,12 @@ def main(page: ft.Page):
                 ft.ElevatedButton(
                     "해당없음", width=500, on_click=lambda _: page.go("/stakeholder_ok")
                 ),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
@@ -458,7 +492,12 @@ def main(page: ft.Page):
                     bgcolor=ft.colors.SURFACE_VARIANT,
                 ),
                 ft.Text("사적이해관계자 신고·회피 의무가 없습니다."),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
@@ -468,7 +507,12 @@ def main(page: ft.Page):
             [
                 ft.AppBar(title=ft.Text("신고조치 필요"), bgcolor=ft.colors.SURFACE_VARIANT),
                 ft.Text("사적이해관계자 신고 조치가 필요합니다."),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
@@ -491,7 +535,7 @@ def main(page: ft.Page):
                 ft.AppBar(
                     title=ft.Text("직무관련자와의 거래 Checklist 1"),
                     bgcolor=ft.colors.SURFACE_VARIANT,
-                ),                
+                ),
                 ft.Text("거래 상대방이 자신이 수행하고 있는 직무와 관련되는 자로 아래 항목에 해당하나요?", width=500),
                 ft.ElevatedButton(
                     "직무수행과 관련하여 일정한 행위나 조치를 요구하는 개인·법인·단체",
@@ -521,7 +565,12 @@ def main(page: ft.Page):
                 ft.ElevatedButton(
                     "해당없음", width=500, on_click=lambda _: page.go("/job_related_ok")
                 ),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
@@ -575,7 +624,12 @@ def main(page: ft.Page):
                 ft.ElevatedButton(
                     "해당없음", width=500, on_click=lambda _: page.go("/job_related_ok")
                 ),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
@@ -606,7 +660,12 @@ def main(page: ft.Page):
                 ft.ElevatedButton(
                     "해당없음", width=500, on_click=lambda _: page.go("/job_related_ok")
                 ),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
@@ -643,7 +702,12 @@ def main(page: ft.Page):
                     width=500,
                     on_click=lambda _: page.go("/job_related_declaration"),
                 ),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
@@ -656,7 +720,12 @@ def main(page: ft.Page):
                     bgcolor=ft.colors.SURFACE_VARIANT,
                 ),
                 ft.Text("직무관련자와의 거래 신고·회피 의무가 없어 종료"),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
@@ -666,7 +735,12 @@ def main(page: ft.Page):
             [
                 ft.AppBar(title=ft.Text("신고조치 필요"), bgcolor=ft.colors.SURFACE_VARIANT),
                 ft.Text("직무관련자와의 거래가 신고 조치가 필요합니다."),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
@@ -715,7 +789,12 @@ def main(page: ft.Page):
                 ft.ElevatedButton(
                     "해당없음", width=500, on_click=lambda _: page.go("/retired_check2")
                 ),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
@@ -746,7 +825,12 @@ def main(page: ft.Page):
                 ft.ElevatedButton(
                     "해당없음", width=500, on_click=lambda _: page.go("/retired_ok")
                 ),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
@@ -782,7 +866,12 @@ def main(page: ft.Page):
                 ft.ElevatedButton(
                     "해당없음", width=500, on_click=lambda _: page.go("/retired_ok")
                 ),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
@@ -795,10 +884,14 @@ def main(page: ft.Page):
                     bgcolor=ft.colors.SURFACE_VARIANT,
                 ),
                 ft.Text("퇴직자 사적접촉 신고·회피 의무가 없습니다."),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-
         )
 
         retired_declaration = ft.View(
@@ -806,7 +899,12 @@ def main(page: ft.Page):
             [
                 ft.AppBar(title=ft.Text("신고조치 필요"), bgcolor=ft.colors.SURFACE_VARIANT),
                 ft.Text("퇴직자 사적 접촉 신고 조치가 필요합니다."),
-                ft.ElevatedButton("처음으로", bgcolor=ft.colors.LIGHT_GREEN_100, width=500, on_click=lambda _: page.go("/")),
+                ft.ElevatedButton(
+                    "처음으로",
+                    bgcolor=ft.colors.LIGHT_GREEN_100,
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
