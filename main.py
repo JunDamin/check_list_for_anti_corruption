@@ -4,7 +4,7 @@ import flet as ft
 
 # %%
 def main(page: ft.Page):
-    page.title = ""
+    page.title = "반부패 이해충돌 방지 자가진다 체크리스트"
 
     def route_change(route):
         page.views.clear()
@@ -20,21 +20,29 @@ def main(page: ft.Page):
                     "수수금지 음식물 선물 경조사비 자가 진단 체크리스트",
                     width=500,
                     on_click=lambda _: page.go("/present_check1"),
+                    icon=ft.icons.CARD_GIFTCARD,
+                    height=50,
                 ),
                 ft.ElevatedButton(
                     "사적이해관계자의 신고·회피 의무 체크리스트",
                     width=500,
                     on_click=lambda _: page.go("/stakeholder_check1"),
+                    icon=ft.icons.PEOPLE_OUTLINE,
+                    height=50,
                 ),
                 ft.ElevatedButton(
                     "직무관련자와의 거래 신고 의무 체크리스트",
                     width=500,
                     on_click=lambda _: page.go("/job_related_check1"),
+                    icon=ft.icons.HANDSHAKE,
+                    height=50,
                 ),
                 ft.ElevatedButton(
                     "퇴직자 사적접촉 신고 의무 체크리스트",
                     width=500,
                     on_click=lambda _: page.go("/retired_check1"),
+                    icon=ft.icons.ACCESSIBILITY,
+                    height=50,
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
@@ -225,7 +233,7 @@ def main(page: ft.Page):
         present_check_exception = ft.View(
             "/present_check_exception",
             [
-                ft.AppBar(title=ft.Text("선물수수 허용"), bgcolor=ft.colors.SURFACE_VARIANT),
+                ft.AppBar(title=ft.Text("선물수수 허용"), bgcolor=ft.colors.GREEN),
                 ft.Text("예외사유에 해당되어 선물수수가 가능합니다."),
                 ft.FilledButton(
                     "처음으로",
@@ -240,7 +248,7 @@ def main(page: ft.Page):
         present_check_ok = ft.View(
             "/present_check_ok",
             [
-                ft.AppBar(title=ft.Text("선물수수 허용"), bgcolor=ft.colors.SURFACE_VARIANT),
+                ft.AppBar(title=ft.Text("선물수수 허용"), bgcolor=ft.colors.GREEN),
                 ft.Text("직무관련성이 없는 1회 100만원 이하의 선물수수가 허용됩니다."),
                 ft.FilledButton(
                     "처음으로",
@@ -255,7 +263,7 @@ def main(page: ft.Page):
         present_declaration = ft.View(
             "/present_declaration",
             [
-                ft.AppBar(title=ft.Text("신고조치 필요"), bgcolor=ft.colors.SURFACE_VARIANT),
+                ft.AppBar(title=ft.Text("신고조치 필요"), bgcolor=ft.colors.RED),
                 ft.Text("선물수수가 불가하여 신고 조치가 필요합니다."),
                 ft.FilledButton(
                     "처음으로",
@@ -508,7 +516,7 @@ def main(page: ft.Page):
             [
                 ft.AppBar(
                     title=ft.Text("사적이해관계자 신고·회피 의무 불요"),
-                    bgcolor=ft.colors.SURFACE_VARIANT,
+                    bgcolor=ft.colors.GREEN,
                 ),
                 ft.Text("사적이해관계자 신고·회피 의무가 없습니다."),
                 ft.FilledButton(
@@ -524,7 +532,7 @@ def main(page: ft.Page):
         stakeholder_declaration = ft.View(
             "/stakeholder_declaration",
             [
-                ft.AppBar(title=ft.Text("신고조치 필요"), bgcolor=ft.colors.SURFACE_VARIANT),
+                ft.AppBar(title=ft.Text("신고조치 필요"), bgcolor=ft.colors.RED),
                 ft.Text("사적이해관계자 신고 조치가 필요합니다."),
                 ft.FilledButton(
                     "처음으로",
@@ -736,7 +744,7 @@ def main(page: ft.Page):
             [
                 ft.AppBar(
                     title=ft.Text("신고·회피 의무 불요"),
-                    bgcolor=ft.colors.SURFACE_VARIANT,
+                    bgcolor=ft.colors.GREEN,
                 ),
                 ft.Text("직무관련자와의 거래 신고·회피 의무가 없어 종료"),
                 ft.FilledButton(
@@ -752,7 +760,7 @@ def main(page: ft.Page):
         job_related_declaration = ft.View(
             "/job_related_declaration",
             [
-                ft.AppBar(title=ft.Text("신고조치 필요"), bgcolor=ft.colors.SURFACE_VARIANT),
+                ft.AppBar(title=ft.Text("신고조치 필요"), bgcolor=ft.colors.RED),
                 ft.Text("직무관련자와의 거래가 신고 조치가 필요합니다."),
                 ft.FilledButton(
                     "처음으로",
@@ -900,7 +908,7 @@ def main(page: ft.Page):
             [
                 ft.AppBar(
                     title=ft.Text("신고·회피 의무 불요"),
-                    bgcolor=ft.colors.SURFACE_VARIANT,
+                    bgcolor=ft.colors.GREEN,
                 ),
                 ft.Text("퇴직자 사적접촉 신고·회피 의무가 없습니다."),
                 ft.FilledButton(
@@ -916,7 +924,7 @@ def main(page: ft.Page):
         retired_declaration = ft.View(
             "/retired_declaration",
             [
-                ft.AppBar(title=ft.Text("신고조치 필요"), bgcolor=ft.colors.SURFACE_VARIANT),
+                ft.AppBar(title=ft.Text("신고조치 필요"), bgcolor=ft.colors.RED),
                 ft.Text("퇴직자 사적 접촉 신고 조치가 필요합니다."),
                 ft.FilledButton(
                     "처음으로",
