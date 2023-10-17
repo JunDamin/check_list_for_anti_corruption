@@ -35,6 +35,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         present_check1 = ft.View(
@@ -62,6 +63,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         present_check2 = ft.View(
@@ -135,6 +137,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         present_check3 = ft.View(
@@ -201,6 +204,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         present_check_exception = ft.View(
@@ -216,6 +220,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         present_check_ok = ft.View(
@@ -231,6 +236,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         present_declaration = ft.View(
@@ -246,6 +252,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         ## 공식행사 체크리스트 추가 필요
@@ -327,6 +334,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         stakeholder_check2 = ft.View(
@@ -373,6 +381,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         stakeholder_check3 = ft.View(
@@ -411,6 +420,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         stakeholder_check4 = ft.View(
@@ -482,6 +492,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         stakeholder_ok = ft.View(
@@ -500,6 +511,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         stakeholder_declaration = ft.View(
@@ -515,6 +527,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         stakeholder_routes = {
@@ -573,6 +586,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         job_related_check2 = ft.View(
@@ -632,6 +646,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         job_related_check3 = ft.View(
@@ -668,6 +683,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
         job_related_check4 = ft.View(
             "/job_related_check4",
@@ -710,6 +726,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         job_related_ok = ft.View(
@@ -728,6 +745,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         job_related_declaration = ft.View(
@@ -743,6 +761,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         job_related_routes = {
@@ -797,6 +816,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         retired_check2 = ft.View(
@@ -833,6 +853,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         retired_check3 = ft.View(
@@ -874,6 +895,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         retired_ok = ft.View(
@@ -892,6 +914,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         retired_declaration = ft.View(
@@ -907,6 +930,7 @@ def main(page: ft.Page):
                 ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN
         )
 
         retired_routes = {
