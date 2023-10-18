@@ -4,8 +4,8 @@ import flet as ft
 
 # %%
 def main(page: ft.Page):
-    page.title = "반부패 이해충돌 방지 자가진다 체크리스트"
-
+    page.title = "반부패 이해충돌 방지 자가진단 체크리스트"
+    
     def route_change(route):
         page.views.clear()
 
@@ -966,5 +966,5 @@ def main(page: ft.Page):
     page.go(page.route)
 
 
-ft.app(target=main)
+ft.app(target=main, assets_dir="assets")
 # %%
