@@ -25,17 +25,16 @@ def main(page: ft.Page):
                     bgcolor=ft.colors.SURFACE_VARIANT,
                 ),
                 ft.ElevatedButton(
-                    "공공기관 직원입니다.",
+                    content=ft.Row(controls=[ft.Icon(name=ft.icons.PUBLIC), ft.Text("공공기관 직원입니다.",)], alignment=ft.MainAxisAlignment.CENTER),
                     width=500,
                     on_click=lambda _: page.go("/internal"),
-                    icon=ft.icons.CARD_GIFTCARD,
+                    
                     height=50,
                 ),
                 ft.ElevatedButton(
-                    "공공기관 직원이 아닙니다.",
+                    content=ft.Row(controls=[ft.Icon(name=ft.icons.PRIVACY_TIP), ft.Text("공공기관 직원이 아닙니다.",)], alignment=ft.MainAxisAlignment.CENTER),                    
                     width=500,
                     on_click=lambda _: page.go("/external"),
-                    icon=ft.icons.PEOPLE_OUTLINE,
                     height=50,
                 ),
             ],

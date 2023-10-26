@@ -1,9 +1,8 @@
-
-import flet as ft 
+import flet as ft
 from presents_check_ex import present_check_ex
 
-def present_check(page):
 
+def present_check(page):
     present_check1 = ft.View(
         "/present_check1",
         [
@@ -11,6 +10,7 @@ def present_check(page):
                 title=ft.Text("Checklist 1 가액 자가 진단"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
+            ft.Text("제공받은 금품의 가격이 어떻게 되나요?", width=500),
             ft.ElevatedButton(
                 "1회 100만원(회계연도 300만원) 초과",
                 width=500,
@@ -26,7 +26,6 @@ def present_check(page):
                 width=500,
                 on_click=lambda _: page.go("/internal"),
             ),
-            
         ],
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         scroll=ft.ScrollMode.HIDDEN,
@@ -39,62 +38,71 @@ def present_check(page):
                 title=ft.Text("Checklist 2 직무관련성 자가진단"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Text("(1) 직무 관련자"),
-            ft.ElevatedButton(
-                "기관에 민원 사무를 신청하는 중이거나 신청하려는 것이 명백한 개인 또는 법인, 단체",
-                width=500,
-                on_click=lambda _: page.go("/present_check3"),
+            ft.Text("선물한 사람과의 관계가 어떻게 되나요?\n"),
+            ft.Column(
+                [
+                    ft.Text("(1) 직무 관련자"),
+                    ft.ElevatedButton(
+                        "기관에 민원 사무를 신청하는 중이거나 신청하려는 것이 명백한 개인 또는 법인, 단체",
+                        width=500,
+                        on_click=lambda _: page.go("/present_check3"),
+                    ),
+                    ft.ElevatedButton(
+                        "인허가, 검사, 감사, 단속, 지도 등의 대상인 개인 또는 법인, 단체",
+                        width=500,
+                        on_click=lambda _: page.go("/present_check3"),
+                    ),
+                    ft.ElevatedButton(
+                        "결정, 감정, 시험, 사정, 조정 등으로 이익 또는 불이익을 직접적으로 받는 개인 또는 법인, 단체",
+                        width=500,
+                        on_click=lambda _: page.go("/present_check3"),
+                    ),
+                    ft.ElevatedButton(
+                        "수사, 감사, 감독, 검사, 단속, 행정지도 또는 이에 준하는 업무 절차에 따라 이익 또는 불이익을 받는 법인, 단체 또는 개인",
+                        width=500,
+                        on_click=lambda _: page.go("/present_check3"),
+                    ),
+                    ft.ElevatedButton(
+                        "기관과 계약을 체결하거나 체결하려는 것이 명백한 개인 또는 법인, 단체",
+                        width=500,
+                        on_click=lambda _: page.go("/present_check3"),
+                    ),
+                    ft.ElevatedButton(
+                        "기타 기관에 대하여 특정한 행위를 요구하거나, 임직원의 직무상 권한의 행사 또는 불행사로 금전적 이해관계에 영향을 받는 개인 또는 법인, 단체",
+                        width=500,
+                        on_click=lambda _: page.go("/present_check3"),
+                    ),
+                    ft.ElevatedButton(
+                        "정책, 사업 등의 결정 또는 집행으로 직접 이익 또는 불이익을 받는 개인 또는 법인, 단체",
+                        width=500,
+                        on_click=lambda _: page.go("/present_check3"),
+                    ),
+                ]
             ),
-            ft.ElevatedButton(
-                "인허가, 검사, 감사, 단속, 지도 등의 대상인 개인 또는 법인, 단체",
-                width=500,
-                on_click=lambda _: page.go("/present_check3"),
-            ),
-            ft.ElevatedButton(
-                "결정, 감정, 시험, 사정, 조정 등으로 이익 또는 불이익을 직접적으로 받는 개인 또는 법인, 단체",
-                width=500,
-                on_click=lambda _: page.go("/present_check3"),
-            ),
-            ft.ElevatedButton(
-                "수사, 감사, 감독, 검사, 단속, 행정지도 또는 이에 준하는 업무 절차에 따라 이익 또는 불이익을 받는 법인, 단체 또는 개인",
-                width=500,
-                on_click=lambda _: page.go("/present_check3"),
-            ),
-            ft.ElevatedButton(
-                "기관과 계약을 체결하거나 체결하려는 것이 명백한 개인 또는 법인, 단체",
-                width=500,
-                on_click=lambda _: page.go("/present_check3"),
-            ),
-            ft.ElevatedButton(
-                "기타 기관에 대하여 특정한 행위를 요구하거나, 임직원의 직무상 권한의 행사 또는 불행사로 금전적 이해관계에 영향을 받는 개인 또는 법인, 단체",
-                width=500,
-                on_click=lambda _: page.go("/present_check3"),
-            ),
-            ft.ElevatedButton(
-                "정책, 사업 등의 결정 또는 집행으로 직접 이익 또는 불이익을 받는 개인 또는 법인, 단체",
-                width=500,
-                on_click=lambda _: page.go("/present_check3"),
-            ),
-            ft.Text("(2) 직무 관련 임직원"),
-            ft.ElevatedButton(
-                "임직원의 소관 업무와 관련하여 직무상 명령을 받는 하급자",
-                width=500,
-                on_click=lambda _: page.go("/present_check3"),
-            ),
-            ft.ElevatedButton(
-                "인사, 예산, 감사, 상훈 또는 평가 등의 직무를 수행하는 임직원",
-                width=500,
-                on_click=lambda _: page.go("/present_check3"),
-            ),
-            ft.ElevatedButton(
-                "사무를 위임, 위탁한 경우 그 사무의 위임, 위탁을 받은 임직원",
-                width=500,
-                on_click=lambda _: page.go("/present_check3"),
-            ),
-            ft.ElevatedButton(
-                "기타 기관장이 정하는 임직원",
-                width=500,
-                on_click=lambda _: page.go("/present_check3"),
+            ft.Column(
+                [
+                    ft.Text("(2) 직무 관련 임직원"),
+                    ft.ElevatedButton(
+                        "임직원의 소관 업무와 관련하여 직무상 명령을 받는 하급자",
+                        width=500,
+                        on_click=lambda _: page.go("/present_check3"),
+                    ),
+                    ft.ElevatedButton(
+                        "인사, 예산, 감사, 상훈 또는 평가 등의 직무를 수행하는 임직원",
+                        width=500,
+                        on_click=lambda _: page.go("/present_check3"),
+                    ),
+                    ft.ElevatedButton(
+                        "사무를 위임, 위탁한 경우 그 사무의 위임, 위탁을 받은 임직원",
+                        width=500,
+                        on_click=lambda _: page.go("/present_check3"),
+                    ),
+                    ft.ElevatedButton(
+                        "기타 기관장이 정하는 임직원",
+                        width=500,
+                        on_click=lambda _: page.go("/present_check3"),
+                    ),
+                ]
             ),
             ft.ElevatedButton(
                 "해당되는 사항이 없습니다.",
@@ -118,6 +126,7 @@ def present_check(page):
                 title=ft.Text("Checklist 3 수수 금지 금품 등의 예외사유 해당여부 판단"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
+            ft.Text("아래 예외사유에 해당하나요?"), 
             ft.ElevatedButton(
                 "공공기관의 장이 소속 임직원이나 파견 임직원에게 지급하는 경우",
                 width=500,
@@ -129,16 +138,17 @@ def present_check(page):
                 on_click=lambda _: page.go("/present_check_exception"),
             ),
             ft.ElevatedButton(
-                "원활한 직무수행 또는 사교, 의례의 목적으로 제공되는 음식물, 경조사비, 선물 등으로 허용 가액 범위 내에 해당하는 금액",
-                width=500,
-                on_click=lambda _: page.go("/present_check_exception"),
-            ),
+                content=ft.Column([ft.Text("원활한 직무수행 또는 사교, 의례의 목적으로 제공되는 음식물, 경조사비, 선물 등으로 허용 가액 범위 내에 해당하는 금액"),
             ft.Text(
                 """<가액범위> 
 - 음식물은 3만원 이하
 - 선물은 5만원 이하 (단, 농산물, 농수산가공품은 명절(설날, 추석) 전 24일 부터 후 5일까지 20만원, 그 외 기간은 10만원)
 - 경조사비는 5만원 이하(단, 화환, 조화의 경우 10만원)""",
+            )]),
                 width=500,
+            
+                on_click=lambda _: page.go("/present_check_exception"),
+                style=ft.ButtonStyle(shape={ft.MaterialState.DEFAULT: ft.RoundedRectangleBorder(radius=20), ft.MaterialState.HOVERED: ft.RoundedRectangleBorder(radius=20), ft.MaterialState.SELECTED: ft.RoundedRectangleBorder(radius=20)})
             ),
             ft.ElevatedButton(
                 "임직원의 친족(「민법」 제777조 기준)이 제공하는 음식물, 선물, 경조사비",
@@ -240,7 +250,5 @@ def present_check(page):
         "/present_check_exception": present_check_exception,
         "/present_declaration": present_declaration,
     }
-
-
 
     return preesent_routes
