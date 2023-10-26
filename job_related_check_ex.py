@@ -10,7 +10,7 @@ def job_related_check_ex(page):
                 title=ft.Text("직무관련자와의 거래 Checklist 1"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Text("거래 상대방이 자신이 수행하고 있는 직무와 관련되는 자로 아래 항목에 해당하나요?", width=500),
+            ft.Markdown("본인은 거래 상대방(**공직자**)의 직무에 관련되는 자로 아래 항목에 해당하나요?", width=500),
             ft.ElevatedButton(
                 "직무수행과 관련하여 일정한 행위나 조치를 요구하는 개인·법인·단체",
                 width=500,
@@ -56,7 +56,7 @@ def job_related_check_ex(page):
                 title=ft.Text("직무관련자와의 거래 Checklist 2"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Markdown("**직무관련자**와 거래한 자가 아래 항목에 해당하나요?", width=500),
+            ft.Markdown("본인이 아래 항목에 해당하나요?", width=500),
             ft.ElevatedButton(
                 "공직자 자신",
                 width=500,
@@ -136,7 +136,7 @@ def job_related_check_ex(page):
                 on_click=lambda _: page.go("/job_related_check4_ex"),
             ),
             ft.ElevatedButton(
-                "물품·용역·공사 등의 계약을 체결하는 행위",
+                "그 외의 물품·용역·공사 등의 계약을 체결하는 행위\n(1회 100만원이 초과하고 계약서를 작성하는 중고거래(차량판매 등))",
                 width=500,
                 on_click=lambda _: page.go("/job_related_check4_ex"),
             ),
@@ -159,7 +159,7 @@ def job_related_check_ex(page):
                 title=ft.Text("직무관련자와의 거래 Checklist 4"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Markdown("**직무관련자**와 거래한 자가 아래 항목에 해당하나요?", width=500),
+            ft.Markdown("본인이 아래 항목에 해당하나요?", width=500),
             ft.ElevatedButton(
                 "직무관련자가 「민법」 제777조에 따른 친족인 경우",
                 width=500,

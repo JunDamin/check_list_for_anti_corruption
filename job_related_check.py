@@ -136,7 +136,7 @@ def job_related_check(page):
                 on_click=lambda _: page.go("/job_related_check4"),
             ),
             ft.ElevatedButton(
-                "물품·용역·공사 등의 계약을 체결하는 행위",
+                "그 외의 물품·용역·공사 등의 계약을 체결하는 행위\n(1회 100만원이 초과하고 계약서를 작성하는 중고거래(차량 판매 등))",
                 width=500,
                 on_click=lambda _: page.go("/job_related_check4"),
             ),

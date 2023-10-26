@@ -212,7 +212,7 @@ def present_check_ex(page):
         "/present_check_ok_ex",
         [
             ft.AppBar(title=ft.Text("선물수수 허용"), bgcolor=ft.colors.GREEN),
-            ft.Text("직무관련성이 없는 1회 100만원 이하의 선물수수가 허용됩니다."),
+            ft.Text("직무관련성이 없는 경우에 한해 1회 100만원 이하의 선물수수가 허용됩니다."),
             ft.FilledButton(
                 "처음으로",
                 width=500,

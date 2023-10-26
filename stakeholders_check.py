@@ -160,7 +160,7 @@ def stakeholder_check(page):
                 title=ft.Text("사적이해관계자 Checklist 4"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Text("직무관련자가 아래 항목에 해당하나요?", width=500),
+            ft.Markdown("**직무관련자**가 아래 항목에 해당하나요?", width=500),
             ft.ElevatedButton(
                 "공직자 또는 그 가족 (「민법」 제779조에 따른 가족을 말한다)",
                 width=500,

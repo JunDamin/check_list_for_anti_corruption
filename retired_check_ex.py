@@ -15,7 +15,7 @@ def retired_check_ex(page):
                 title=ft.Text("퇴직자 사적접촉 Checklist 1"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Text("퇴직자 사적 접촉과 관련하여 아래 항목에 해당하나요?", width=500),
+            ft.Markdown("상대 공직자와의 접촉이 아래 항목에 해당하나요?", width=500),
             ft.ElevatedButton(
                 "퇴직자의 신분이 공직자가 아니게 된 날부터 2년이 지난 경우",
                 width=500,
@@ -92,7 +92,7 @@ def retired_check_ex(page):
                 title=ft.Text("퇴직자 사적접촉 Checklist 3"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Text("사적 접촉 퇴직자가 자신이 수행하고 있는 직무와 관련 되는자로 아래 항목에 해당하나요?", width=500),
+            ft.Text("본인(사적 접촉 퇴직자)이 상대 공직자의 직무와 관련 되는자로 아래 항목에 해당하나요?", width=500),
             ft.ElevatedButton(
                 "직무수행과 관련하여 일정한 행위나 조치를 요구하는 개인이나 법인 또는 단체",
                 width=500,
