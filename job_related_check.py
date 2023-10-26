@@ -56,7 +56,7 @@ def job_related_check(page):
                 title=ft.Text("직무관련자와의 거래 Checklist 2"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Text("직무관련자와 거래한 자가 아래 항목에 해당하나요?", width=500),
+            ft.Markdown("**직무관련자**와 거래한 자가 아래 항목에 해당하나요?", width=500),
             ft.ElevatedButton(
                 "공직자 자신",
                 width=500,
@@ -77,23 +77,32 @@ def job_related_check(page):
                 width=500,
                 on_click=lambda _: page.go("/job_related_check3"),
             ),
-            ft.Text(
-                "공직자 자신, 배우자, 직계존속·비속, 생계를 같이 하는 배우자의 직계존속·비속이 단독으로 또는 합산하여 다음 각 항목 중 어느 하나에 해당하는 주식·지분 등을 소유하고 있는 법인·단체 "
-            ),
-            ft.ElevatedButton(
-                "발행주식 총수의 30% 이상",
-                width=500,
-                on_click=lambda _: page.go("/job_related_check3"),
-            ),
-            ft.ElevatedButton(
-                "출자지분 총수의 30% 이상",
-                width=500,
-                on_click=lambda _: page.go("/job_related_check3"),
-            ),
-            ft.ElevatedButton(
-                "자본금 총액의 50% 이상",
-                width=500,
-                on_click=lambda _: page.go("/job_related_check3"),
+            ft.Container(
+                content=ft.Column(
+                    [
+                        ft.Text(
+                            "공직자 자신, 배우자, 직계존속·비속, 생계를 같이 하는 배우자의 직계존속·비속이 단독으로 또는 합산하여 다음 각 항목 중 어느 하나에 해당하는 주식·지분 등을 소유하고 있는 법인·단체의 ",
+                            width=500,
+                        ),
+                        ft.ElevatedButton(
+                            "발행주식 총수의 30% 이상",
+                            width=500,
+                            on_click=lambda _: page.go("/job_related_check3"),
+                        ),
+                        ft.ElevatedButton(
+                            "출자지분 총수의 30% 이상",
+                            width=500,
+                            on_click=lambda _: page.go("/job_related_check3"),
+                        ),
+                        ft.ElevatedButton(
+                            "자본금 총액의 50% 이상",
+                            width=500,
+                            on_click=lambda _: page.go("/job_related_check3"),
+                        ),
+                    ],
+                ),
+                bgcolor=ft.colors.TEAL_ACCENT, padding=10, border_radius=20
+                
             ),
             ft.ElevatedButton(
                 "해당없음", width=500, on_click=lambda _: page.go("/job_related_ok")
@@ -115,7 +124,7 @@ def job_related_check(page):
                 title=ft.Text("직무관련자와의 거래 Checklist 3"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Text("거래 행위가 아래 항목에 해당하나요?", width=500),
+            ft.Markdown("거래 행위가 아래 항목에 해당하나요?", width=500),
             ft.ElevatedButton(
                 "금전을 빌리거나 빌려주는 행위 및 유가증권을 거래하는 행위",
                 width=500,
@@ -150,7 +159,7 @@ def job_related_check(page):
                 title=ft.Text("직무관련자와의 거래 Checklist 4"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Text("직무관련자와 거래한 자가 아래 항목에 해당하나요?", width=500),
+            ft.Markdown("**직무관련자**와 거래한 자가 아래 항목에 해당하나요?", width=500),
             ft.ElevatedButton(
                 "직무관련자가 「민법」 제777조에 따른 친족인 경우",
                 width=500,
@@ -214,7 +223,8 @@ def job_related_check(page):
 신고방법: 직무관련자가 사적이해관계자로 확인된 경우, 안 날로 부터 14일 이내 '공공기관 청렴포털 시스템'에 의무신고
 - 퇴직자 사적접촉, 직무관련자와의 거래 행위 등도 그 사실을 '안 날'부터 14일 이내 신고
 ※ 상담신고처: 공공기관 청렴포털 시스템(www.clean.go.kr) 혹은 compliance@koica.go.kr
-""", extension_set=ft.MarkdownExtensionSet.GITHUB_WEB
+""",
+                extension_set=ft.MarkdownExtensionSet.GITHUB_WEB,
             ),
             ft.FilledButton(
                 "처음으로",
