@@ -25,6 +25,33 @@ def main(page: ft.Page):
                     bgcolor=ft.colors.SURFACE_VARIANT,
                 ),
                 ft.ElevatedButton(
+                    "공공기관 직원입니다.",
+                    width=500,
+                    on_click=lambda _: page.go("/internal"),
+                    icon=ft.icons.CARD_GIFTCARD,
+                    height=50,
+                ),
+                ft.ElevatedButton(
+                    "공공기관 직원이 아닙니다.",
+                    width=500,
+                    on_click=lambda _: page.go("/external"),
+                    icon=ft.icons.PEOPLE_OUTLINE,
+                    height=50,
+                ),
+            ],
+            horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            vertical_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN,
+        )
+        
+        internal = ft.View(
+            "/internal",
+            [
+                ft.AppBar(
+                    title=ft.Text("반부패 자가진단 체크리스트"),
+                    bgcolor=ft.colors.SURFACE_VARIANT,
+                ),
+                ft.ElevatedButton(
                     "수수금지 음식물 선물 경조사비 자가 진단 체크리스트",
                     width=500,
                     on_click=lambda _: page.go("/present_check1"),
@@ -52,6 +79,57 @@ def main(page: ft.Page):
                     icon=ft.icons.ACCESSIBILITY,
                     height=50,
                 ),
+                ft.FilledButton(
+                "사용자 변경하기",
+                width=500,
+                on_click=lambda _: page.go("/"),
+            ),
+            ],
+            horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            vertical_alignment=ft.CrossAxisAlignment.CENTER,
+            scroll=ft.ScrollMode.HIDDEN,
+        )
+
+        external = ft.View(
+            "/external",
+            [
+                ft.AppBar(
+                    title=ft.Text("반부패 자가진단 체크리스트"),
+                    bgcolor=ft.colors.SURFACE_VARIANT,
+                ),
+                ft.ElevatedButton(
+                    "수수금지 음식물 선물 경조사비 자가 진단 체크리스트",
+                    width=500,
+                    on_click=lambda _: page.go("/present_check1_ex"),
+                    icon=ft.icons.CARD_GIFTCARD,
+                    height=50,
+                ),
+                ft.ElevatedButton(
+                    "사적이해관계자의 신고·회피 의무 체크리스트",
+                    width=500,
+                    on_click=lambda _: page.go("/stakeholder_check1_ex"),
+                    icon=ft.icons.PEOPLE_OUTLINE,
+                    height=50,
+                ),
+                ft.ElevatedButton(
+                    "직무관련자와의 거래 신고 의무 체크리스트",
+                    width=500,
+                    on_click=lambda _: page.go("/job_related_check1_ex"),
+                    icon=ft.icons.HANDSHAKE,
+                    height=50,
+                ),
+                ft.ElevatedButton(
+                    "퇴직자 사적접촉 신고 의무 체크리스트",
+                    width=500,
+                    on_click=lambda _: page.go("/retired_check1_ex"),
+                    icon=ft.icons.ACCESSIBILITY,
+                    height=50,
+                ),
+                ft.FilledButton(
+                "사용자 변경하기",
+                width=500,
+                on_click=lambda _: page.go("/"),
+            ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
@@ -60,6 +138,8 @@ def main(page: ft.Page):
 
         routes = {
             "/": home,
+            "/internal": internal,
+            "/external": external,
         }
 
         present_routes = present_check(page)

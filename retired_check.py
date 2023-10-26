@@ -37,7 +37,7 @@ def retired_check(page):
             ft.FilledButton(
                 "처음으로",
                 width=500,
-                on_click=lambda _: page.go("/"),
+                on_click=lambda _: page.go("/internal"),
             ),
         ],
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,
@@ -73,7 +73,7 @@ def retired_check(page):
             ft.FilledButton(
                 "처음으로",
                 width=500,
-                on_click=lambda _: page.go("/"),
+                on_click=lambda _: page.go("/internal"),
             ),
         ],
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,
@@ -114,7 +114,7 @@ def retired_check(page):
             ft.FilledButton(
                 "처음으로",
                 width=500,
-                on_click=lambda _: page.go("/"),
+                on_click=lambda _: page.go("/internal"),
             ),
         ],
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,
@@ -132,7 +132,7 @@ def retired_check(page):
             ft.FilledButton(
                 "처음으로",
                 width=500,
-                on_click=lambda _: page.go("/"),
+                on_click=lambda _: page.go("/internal"),
             ),
         ],
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,
@@ -147,7 +147,7 @@ def retired_check(page):
             ft.FilledButton(
                 "처음으로",
                 width=500,
-                on_click=lambda _: page.go("/"),
+                on_click=lambda _: page.go("/internal"),
             ),
         ],
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,
