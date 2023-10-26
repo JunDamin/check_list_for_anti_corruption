@@ -1,9 +1,13 @@
 # %%
 import flet as ft
 from presents_check import present_check
+from presents_check_ex import present_check_ex
 from stakeholders_check import stakeholder_check
+from stakeholders_check_ex import stakeholder_check_ex
 from job_related_check import job_related_check
+from job_related_check_ex import job_related_check_ex
 from retired_check import retired_check
+from retired_check_ex import retired_check_ex
 
 
 # %%
@@ -54,21 +58,6 @@ def main(page: ft.Page):
             scroll=ft.ScrollMode.HIDDEN,
         )
 
-        #
-        #
-        #
-
-        ###
-        #
-        ###
-        
-
-        ###
-        #
-        ###
-
-        
-
         routes = {
             "/": home,
         }
@@ -78,10 +67,21 @@ def main(page: ft.Page):
         job_related_routes = job_related_check(page)
         retired_routes = retired_check(page)
 
+
+        preesent_routes_ex = present_check_ex(page)
+        stakeholder_routes_ex = stakeholder_check_ex(page)
+        job_related_routes_ex = job_related_check_ex(page)
+        retired_routes_ex = retired_check_ex(page)
+
+
         routes.update(present_routes)
+        routes.update(preesent_routes_ex)
         routes.update(stakeholder_routes)
+        routes.update(stakeholder_routes_ex)
         routes.update(job_related_routes)
+        routes.update(job_related_routes_ex)
         routes.update(retired_routes)
+        routes.update(retired_routes_ex)
 
         page.views.append(routes.get(page.route, "/"))
 
