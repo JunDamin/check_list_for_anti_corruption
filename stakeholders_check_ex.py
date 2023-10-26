@@ -9,7 +9,7 @@ def stakeholder_check_ex(page):
                 title=ft.Text("사적이해관계자 Checklist 1"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Text("공직자가 수행하는 업무가 아래 항목에 해당하나요?", width=500),
+            ft.Markdown("**공직자**가 수행하는 업무가 아래 항목에 해당하나요?", width=500, extension_set=ft.MarkdownExtensionSet.GITHUB_WEB),
             ft.ElevatedButton(
                 "보조금·장려금·출연금·출자금·교부금·기금의 배정·지급·처분·관리에 관계되는 직무",
                 width=500,
@@ -75,7 +75,7 @@ def stakeholder_check_ex(page):
                 title=ft.Text("사적이해관계자 Checklist 2"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Text("공직자가 수행하는 직무가 아래 항목에 해당하나요?", width=500),
+            ft.Markdown("**공직자**가 수행하는 직무가 아래 항목에 해당하나요?", width=500, extension_set=ft.MarkdownExtensionSet.GITHUB_WEB),
             ft.ElevatedButton(
                 "직무수행과 관련하여 일정한 행위나 조치를 요구하는 개인·법인·단체",
                 width=500,
@@ -121,7 +121,7 @@ def stakeholder_check_ex(page):
                 title=ft.Text("사적이해관계자 Checklist 3"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Text("공직자가 수행하는 직무가 아래 항목에 해당하나요?", width=500),
+            ft.Markdown("**공직자**가 수행하는 직무가 아래 항목에 해당하나요?", width=500, extension_set=ft.MarkdownExtensionSet.GITHUB_WEB),
             ft.ElevatedButton(
                 "불특정 다수를 대상으로 하는 법률이나 대통령령의 제정·개정 또는 폐지를 수반하는 경우",
                 width=500,
