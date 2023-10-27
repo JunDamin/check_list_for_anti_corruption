@@ -126,7 +126,7 @@ def present_check(page):
                 title=ft.Text("Checklist 3 수수 금지 금품 등의 예외사유 해당여부 판단"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Makrdown("## 아래 예외사유에 해당하나요?"), 
+            ft.Markdown("## 아래 예외사유에 해당하나요?"), 
             ft.ElevatedButton(
                 "공공기관의 장이 소속 임직원이나 파견 임직원에게 지급하는 경우",
                 width=500,
