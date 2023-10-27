@@ -9,7 +9,7 @@ def present_check_ex(page):
                 title=ft.Text("Checklist 1 가액 자가 진단"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Text("제공하고자 하는 금품의 가격이 어떻게 되나요?", width=500),
+            ft.Markdown("## 제공하고자 하는 금품의 가격이 어떻게 되나요?", width=500),
             ft.ElevatedButton(
                 "1회 100만원(회계연도 300만원) 초과",
                 width=500,
@@ -37,7 +37,7 @@ def present_check_ex(page):
                 title=ft.Text("Checklist 2 직무관련성 자가진단"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Text("선물한 사람과의 관계가 어떻게 되나요?\n"),
+            ft.Markdown("## 선물한 사람과의 관계가 어떻게 되나요?\n"),
             ft.Column(
                 [
                     ft.Text("(1) 직무 관련자"),
@@ -125,7 +125,7 @@ def present_check_ex(page):
                 title=ft.Text("Checklist 3 수수 금지 금품 등의 예외사유 해당여부 판단"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Text("아래 예외사유에 해당하나요?"),
+            ft.Markdown("## 아래 예외사유에 해당하나요?"),
             ft.ElevatedButton(
                 "공공기관의 장이 소속 임직원이나 파견 임직원에게 지급하는 경우",
                 width=500,
@@ -197,7 +197,7 @@ def present_check_ex(page):
         "/present_check_exception_ex",
         [
             ft.AppBar(title=ft.Text("선물수수 허용"), bgcolor=ft.colors.GREEN),
-            ft.Text("예외사유에 해당되어 선물수수가 가능합니다."),
+            ft.Markdown("## 예외사유에 해당되어 선물수수가 가능합니다."),
             ft.FilledButton(
                 "처음으로",
                 width=500,
@@ -212,7 +212,7 @@ def present_check_ex(page):
         "/present_check_ok_ex",
         [
             ft.AppBar(title=ft.Text("선물수수 허용"), bgcolor=ft.colors.GREEN),
-            ft.Text("직무관련성이 없는 경우에 한해 1회 100만원 이하의 선물수수가 허용됩니다."),
+            ft.Markdown("직무관련성이 없는 경우에 한해 1회 100만원 이하의 선물수수가 허용됩니다."),
             ft.FilledButton(
                 "처음으로",
                 width=500,
@@ -227,7 +227,7 @@ def present_check_ex(page):
         "/present_declaration_ex",
         [
             ft.AppBar(title=ft.Text("신고조치 필요"), bgcolor=ft.colors.RED),
-            ft.Text("선물수수가 불가하여 신고 조치가 필요합니다."),
+            ft.Markdown("선물수수가 불가하여 **신고 조치가 필요**합니다."),
             ft.FilledButton(
                 "처음으로",
                 width=500,

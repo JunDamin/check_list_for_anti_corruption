@@ -10,7 +10,7 @@ def job_related_check_ex(page):
                 title=ft.Text("직무관련자와의 거래 Checklist 1"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Markdown("본인은 거래 상대방(**공직자**)의 직무에 관련되는 자로 아래 항목에 해당하나요?", width=500),
+            ft.Markdown("## 본인은 거래 상대방(**공직자**)의 직무에 관련되는 자로 아래 항목에 해당하나요?", width=500),
             ft.ElevatedButton(
                 "직무수행과 관련하여 일정한 행위나 조치를 요구하는 개인·법인·단체",
                 width=500,
@@ -56,7 +56,7 @@ def job_related_check_ex(page):
                 title=ft.Text("직무관련자와의 거래 Checklist 2"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Markdown("본인이 아래 항목에 해당하나요?", width=500),
+            ft.Markdown("## 본인이 아래 항목에 해당하나요?", width=500),
             ft.ElevatedButton(
                 "공직자 자신",
                 width=500,
@@ -124,7 +124,7 @@ def job_related_check_ex(page):
                 title=ft.Text("직무관련자와의 거래 Checklist 3"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Markdown("거래 행위가 아래 항목에 해당하나요?", width=500),
+            ft.Markdown("## 거래 행위가 아래 항목에 해당하나요?", width=500),
             ft.ElevatedButton(
                 "금전을 빌리거나 빌려주는 행위 및 유가증권을 거래하는 행위",
                 width=500,
@@ -159,7 +159,7 @@ def job_related_check_ex(page):
                 title=ft.Text("직무관련자와의 거래 Checklist 4"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Markdown("본인이 아래 항목에 해당하나요?", width=500),
+            ft.Markdown("## 본인이 아래 항목에 해당하나요?", width=500),
             ft.ElevatedButton(
                 "직무관련자가 「민법」 제777조에 따른 친족인 경우",
                 width=500,
@@ -202,7 +202,7 @@ def job_related_check_ex(page):
                 title=ft.Text("신고·회피 의무 불요"),
                 bgcolor=ft.colors.GREEN,
             ),
-            ft.Text("직무관련자와의 거래 신고·회피 의무가 없어 종료"),
+            ft.Markdown("## 직무관련자와의 거래 신고·회피 의무가 없습니다."),
             ft.FilledButton(
                 "처음으로",
                 width=500,
@@ -217,7 +217,7 @@ def job_related_check_ex(page):
         "/job_related_declaration_ex",
         [
             ft.AppBar(title=ft.Text("신고조치 필요"), bgcolor=ft.colors.RED),
-            ft.Text("직무관련자와의 거래로 신고 조치가 필요합니다."),
+            ft.Markdown("## 직무관련자와의 거래로 신고 조치가 필요합니다."),
             ft.Markdown(
                 """
 신고방법: 직무관련자가 사적이해관계자로 확인된 경우, 안 날로 부터 14일 이내 '공공기관 청렴포털 시스템'에 의무신고

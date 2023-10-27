@@ -15,7 +15,7 @@ def retired_check_ex(page):
                 title=ft.Text("퇴직자 사적접촉 Checklist 1"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Markdown("상대 공직자와의 접촉이 아래 항목에 해당하나요?", width=500),
+            ft.Markdown("## 상대 **공직자**와의 접촉이 아래 항목에 해당하나요?", width=500),
             ft.ElevatedButton(
                 "퇴직자의 신분이 공직자가 아니게 된 날부터 2년이 지난 경우",
                 width=500,
@@ -56,7 +56,7 @@ def retired_check_ex(page):
                 title=ft.Text("퇴직자 사적접촉 Checklist 2"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Text("퇴직자 사적 접촉 유형이 아래 항목에 해당하나요?", width=500),
+            ft.Markdown("## 퇴직자 사적 접촉 유형이 아래 항목에 해당하나요?", width=500),
             ft.ElevatedButton(
                 "골프를 함께하는 행위",
                 width=500,
@@ -92,7 +92,7 @@ def retired_check_ex(page):
                 title=ft.Text("퇴직자 사적접촉 Checklist 3"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Text("본인(사적 접촉 퇴직자)이 상대 공직자의 직무와 관련 되는자로 아래 항목에 해당하나요?", width=500),
+            ft.Markdown("## 본인(사적 접촉 퇴직자)이 상대 공직자의 직무와 관련 되는자로 아래 항목에 해당하나요?", width=500),
             ft.ElevatedButton(
                 "직무수행과 관련하여 일정한 행위나 조치를 요구하는 개인이나 법인 또는 단체",
                 width=500,
@@ -133,7 +133,7 @@ def retired_check_ex(page):
                 title=ft.Text("신고·회피 의무 불요"),
                 bgcolor=ft.colors.GREEN,
             ),
-            ft.Text("퇴직자 사적접촉 신고·회피 의무가 없습니다."),
+            ft.Markdown("## 퇴직자 사적접촉 신고·회피 의무가 없습니다."),
             ft.FilledButton(
                 "처음으로",
                 width=500,
@@ -148,7 +148,14 @@ def retired_check_ex(page):
         "/retired_declaration_ex",
         [
             ft.AppBar(title=ft.Text("신고조치 필요"), bgcolor=ft.colors.RED),
-            ft.Text("퇴직자 사적 접촉 신고 조치가 필요합니다."),
+            ft.Markdown("## 퇴직자 사적 접촉 신고 조치가 **필요**합니다."),
+            ft.Markdown(
+                """
+신고방법: 직무관련자가 사적이해관계자로 확인된 경우, 안 날로 부터 14일 이내 '공공기관 청렴포털 시스템'에 의무신고
+- 퇴직자 사적접촉, 직무관련자와의 거래 행위 등도 그 사실을 '안 날'부터 14일 이내 신고
+※ 상담신고처: 공공기관 청렴포털 시스템([www.clean.go.kr](www.clean.go.kr)) 혹은 compliance@koica.go.kr
+""", extension_set=ft.MarkdownExtensionSet.GITHUB_WEB
+            ),
             ft.FilledButton(
                 "처음으로",
                 width=500,
