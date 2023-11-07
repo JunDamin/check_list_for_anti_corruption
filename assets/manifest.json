@@ -1,9 +1,14 @@
 {
-    "name": "checklist",
+    "name": "KOICA checklist",
     "icons": [
         {
-            "src": "icons/favicon-32x32.png",
+            "src": "icons/32.png",
             "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/64.png",
+            "sizes": "64x64",
             "type": "image/png"
         }
     ]
