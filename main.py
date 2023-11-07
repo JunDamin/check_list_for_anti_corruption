@@ -25,14 +25,14 @@ def main(page: ft.Page):
                     bgcolor=ft.colors.SURFACE_VARIANT,
                 ),
                 ft.ElevatedButton(
-                    content=ft.Row(controls=[ft.Icon(name=ft.icons.PUBLIC), ft.Text("공공기관 직원입니다.",)], alignment=ft.MainAxisAlignment.CENTER),
+                    content=ft.Row(controls=[ft.Icon(name=ft.icons.PUBLIC), ft.Text("공직자(공무수행사인)입니다.",)], alignment=ft.MainAxisAlignment.CENTER),
                     width=500,
                     on_click=lambda _: page.go("/internal"),
                     
                     height=50,
                 ),
                 ft.ElevatedButton(
-                    content=ft.Row(controls=[ft.Icon(name=ft.icons.PRIVACY_TIP), ft.Text("공공기관 직원이 아닙니다.",)], alignment=ft.MainAxisAlignment.CENTER),                    
+                    content=ft.Row(controls=[ft.Icon(name=ft.icons.PRIVACY_TIP), ft.Text("공직자(공무수행사인)가 아닙니다.",)], alignment=ft.MainAxisAlignment.CENTER),                    
                     width=500,
                     on_click=lambda _: page.go("/external"),
                     height=50,
