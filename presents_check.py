@@ -126,7 +126,7 @@ def present_check(page):
                 title=ft.Text("Checklist 3 수수 금지 금품 등의 예외사유 해당여부 판단"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Markdown("## 아래 예외사유에 해당하나요?"), 
+            ft.Markdown("## 아래 예외사유에 해당하나요?"),
             ft.ElevatedButton(
                 "공공기관의 장이 소속 임직원이나 파견 임직원에게 지급하는 경우",
                 width=500,
@@ -138,17 +138,28 @@ def present_check(page):
                 on_click=lambda _: page.go("/present_check_exception"),
             ),
             ft.ElevatedButton(
-                content=ft.Column([ft.Text("원활한 직무수행 또는 사교, 의례의 목적으로 제공되는 음식물, 경조사비, 선물 등으로 허용 가액 범위 내에 해당하는 금액"),
-            ft.Text(
-                """<가액범위> 
+                content=ft.Column(
+                    [
+                        ft.Text(
+                            "원활한 직무수행 또는 사교, 의례의 목적으로 제공되는 음식물, 경조사비, 선물 등으로 허용 가액 범위 내에 해당하는 금액"
+                        ),
+                        ft.Text(
+                            """<가액범위> 
 - 음식물은 3만원 이하
 - 선물은 5만원 이하 (단, 농산물, 농수산가공품은 명절(설날, 추석) 전 24일 부터 후 5일까지 20만원, 그 외 기간은 10만원)
 - 경조사비는 5만원 이하(단, 화환, 조화의 경우 10만원)""",
-            )]),
+                        ),
+                    ]
+                ),
                 width=500,
-            
                 on_click=lambda _: page.go("/present_check_exception"),
-                style=ft.ButtonStyle(shape={ft.MaterialState.DEFAULT: ft.RoundedRectangleBorder(radius=20), ft.MaterialState.HOVERED: ft.RoundedRectangleBorder(radius=20), ft.MaterialState.SELECTED: ft.RoundedRectangleBorder(radius=20)})
+                style=ft.ButtonStyle(
+                    shape={
+                        ft.MaterialState.DEFAULT: ft.RoundedRectangleBorder(radius=20),
+                        ft.MaterialState.HOVERED: ft.RoundedRectangleBorder(radius=20),
+                        ft.MaterialState.SELECTED: ft.RoundedRectangleBorder(radius=20),
+                    }
+                ),
             ),
             ft.ElevatedButton(
                 "임직원의 친족(「민법」 제777조 기준)이 제공하는 음식물, 선물, 경조사비",
@@ -234,6 +245,11 @@ def present_check(page):
                 "처음으로",
                 width=500,
                 on_click=lambda _: page.go("/internal"),
+            ),
+            ft.FilledButton(
+                "청렴포털 시스템 열기",
+                width=500,
+                on_click=lambda _: page.launch_url("www.clean.go.kr"),
             ),
         ],
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,

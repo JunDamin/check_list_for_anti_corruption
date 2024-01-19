@@ -230,6 +230,11 @@ def job_related_check_ex(page):
                 width=500,
                 on_click=lambda _: page.go("/external"),
             ),
+            ft.FilledButton(
+                "청렴포털 시스템 열기",
+                width=500,
+                on_click=lambda _: page.launch_url("www.clean.go.kr")
+            )
         ],
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         scroll=ft.ScrollMode.HIDDEN,

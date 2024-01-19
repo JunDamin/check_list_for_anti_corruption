@@ -2,12 +2,10 @@ import flet as ft
 
 
 def retired_check_ex(page):
-
     ##
     #
     ##
 
-        
     retired_check1_ex = ft.View(
         "/retired_check1_ex",
         [
@@ -92,7 +90,9 @@ def retired_check_ex(page):
                 title=ft.Text("퇴직자 사적접촉 Checklist 3"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Markdown("## 본인(사적 접촉 퇴직자)이 상대 공직자의 직무와 관련 되는자로 아래 항목에 해당하나요?", width=500),
+            ft.Markdown(
+                "## 본인(사적 접촉 퇴직자)이 상대 공직자의 직무와 관련 되는자로 아래 항목에 해당하나요?", width=500
+            ),
             ft.ElevatedButton(
                 "직무수행과 관련하여 일정한 행위나 조치를 요구하는 개인이나 법인 또는 단체",
                 width=500,
@@ -154,12 +154,18 @@ def retired_check_ex(page):
 신고방법: 직무관련자가 사적이해관계자로 확인된 경우, 안 날로 부터 14일 이내 '공공기관 청렴포털 시스템'에 의무신고
 - 퇴직자 사적접촉, 직무관련자와의 거래 행위 등도 그 사실을 '안 날'부터 14일 이내 신고
 ※ 상담신고처: 공공기관 청렴포털 시스템([www.clean.go.kr](www.clean.go.kr)) 혹은 compliance@koica.go.kr
-""", extension_set=ft.MarkdownExtensionSet.GITHUB_WEB
+""",
+                extension_set=ft.MarkdownExtensionSet.GITHUB_WEB,
             ),
             ft.FilledButton(
                 "처음으로",
                 width=500,
                 on_click=lambda _: page.go("/external"),
+            ),
+            ft.FilledButton(
+                "청렴포털 시스템 열기",
+                width=500,
+                on_click=lambda _: page.launch_url("www.clean.go.kr"),
             ),
         ],
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,

@@ -101,8 +101,9 @@ def job_related_check(page):
                         ),
                     ],
                 ),
-                bgcolor=ft.colors.TEAL_ACCENT, padding=10, border_radius=20
-                
+                bgcolor=ft.colors.TEAL_ACCENT,
+                padding=10,
+                border_radius=20,
             ),
             ft.ElevatedButton(
                 "해당없음", width=500, on_click=lambda _: page.go("/job_related_ok")
@@ -230,6 +231,11 @@ def job_related_check(page):
                 "처음으로",
                 width=500,
                 on_click=lambda _: page.go("/internal"),
+            ),
+            ft.FilledButton(
+                "청렴포털 시스템 열기",
+                width=500,
+                on_click=lambda _: page.launch_url("www.clean.go.kr"),
             ),
         ],
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,

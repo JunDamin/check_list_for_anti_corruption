@@ -1,7 +1,7 @@
 import flet as ft
 
-def stakeholder_check_ex(page):
 
+def stakeholder_check_ex(page):
     stakeholder_check1_ex = ft.View(
         "/stakeholder_check1_ex",
         [
@@ -75,7 +75,11 @@ def stakeholder_check_ex(page):
                 title=ft.Text("사적이해관계자 Checklist 2"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Markdown("## 상대 **공직자**가 수행하는 직무가 아래 항목에 해당하나요?", width=500, extension_set=ft.MarkdownExtensionSet.GITHUB_WEB),
+            ft.Markdown(
+                "## 상대 **공직자**가 수행하는 직무가 아래 항목에 해당하나요?",
+                width=500,
+                extension_set=ft.MarkdownExtensionSet.GITHUB_WEB,
+            ),
             ft.ElevatedButton(
                 "직무수행과 관련하여 일정한 행위나 조치를 요구하는 개인·법인·단체",
                 width=500,
@@ -121,7 +125,11 @@ def stakeholder_check_ex(page):
                 title=ft.Text("사적이해관계자 Checklist 3"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
-            ft.Markdown("## 상대 **공직자**가 수행하는 직무가 아래 항목에 해당하나요?", width=500, extension_set=ft.MarkdownExtensionSet.GITHUB_WEB),
+            ft.Markdown(
+                "## 상대 **공직자**가 수행하는 직무가 아래 항목에 해당하나요?",
+                width=500,
+                extension_set=ft.MarkdownExtensionSet.GITHUB_WEB,
+            ),
             ft.ElevatedButton(
                 "불특정 다수를 대상으로 하는 법률이나 대통령령의 제정·개정 또는 폐지를 수반하는 경우",
                 width=500,
@@ -251,12 +259,18 @@ def stakeholder_check_ex(page):
 신고방법: 직무관련자가 사적이해관계자로 확인된 경우, 안 날로 부터 14일 이내 '공공기관 청렴포털 시스템'에 의무신고
 - 퇴직자 사적접촉, 직무관련자와의 거래 행위 등도 그 사실을 '안 날'부터 14일 이내 신고
 ※ 상담신고처: 공공기관 청렴포털 시스템([www.clean.go.kr](www.clean.go.kr)) 혹은 compliance@koica.go.kr
-""", extension_set=ft.MarkdownExtensionSet.GITHUB_WEB
+""",
+                extension_set=ft.MarkdownExtensionSet.GITHUB_WEB,
             ),
             ft.FilledButton(
                 "처음으로",
                 width=500,
                 on_click=lambda _: page.go("/external"),
+            ),
+            ft.FilledButton(
+                "청렴포털 시스템 열기",
+                width=500,
+                on_click=lambda _: page.launch_url("www.clean.go.kr"),
             ),
         ],
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,
