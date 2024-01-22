@@ -153,16 +153,12 @@ def retired_check(page):
 ※ 상담신고처: 공공기관 청렴포털 시스템([www.clean.go.kr](www.clean.go.kr)) 혹은 compliance@koica.go.kr
 """,
                 extension_set=ft.MarkdownExtensionSet.GITHUB_WEB,
+                auto_follow_links=True,
             ),
             ft.FilledButton(
                 "처음으로",
                 width=500,
                 on_click=lambda _: page.go("/internal"),
-            ),
-            ft.FilledButton(
-                "청렴포털 시스템 열기",
-                width=500,
-                on_click=lambda _: page.launch_url("www.clean.go.kr"),
             ),
         ],
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,

@@ -13,7 +13,7 @@ from retired_check_ex import retired_check_ex
 # %%
 def main(page: ft.Page):
     page.title = "반부패 이해충돌 방지 자가진단 체크리스트"
-    
+
     def route_change(route):
         page.views.clear()
 
@@ -25,14 +25,29 @@ def main(page: ft.Page):
                     bgcolor=ft.colors.SURFACE_VARIANT,
                 ),
                 ft.ElevatedButton(
-                    content=ft.Row(controls=[ft.Icon(name=ft.icons.PUBLIC), ft.Text("공직자(공무수행사인)입니다.",)], alignment=ft.MainAxisAlignment.CENTER),
+                    content=ft.Row(
+                        controls=[
+                            ft.Icon(name=ft.icons.PUBLIC),
+                            ft.Text(
+                                "공직자(공무수행사인)입니다.",
+                            ),
+                        ],
+                        alignment=ft.MainAxisAlignment.CENTER,
+                    ),
                     width=500,
                     on_click=lambda _: page.go("/internal"),
-                    
                     height=50,
                 ),
                 ft.ElevatedButton(
-                    content=ft.Row(controls=[ft.Icon(name=ft.icons.PRIVACY_TIP), ft.Text("공직자(공무수행사인)가 아닙니다.",)], alignment=ft.MainAxisAlignment.CENTER),                    
+                    content=ft.Row(
+                        controls=[
+                            ft.Icon(name=ft.icons.PRIVACY_TIP),
+                            ft.Text(
+                                "공직자(공무수행사인)가 아닙니다.",
+                            ),
+                        ],
+                        alignment=ft.MainAxisAlignment.CENTER,
+                    ),
                     width=500,
                     on_click=lambda _: page.go("/external"),
                     height=50,
@@ -42,7 +57,7 @@ def main(page: ft.Page):
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
             scroll=ft.ScrollMode.HIDDEN,
         )
-        
+
         internal = ft.View(
             "/internal",
             [
@@ -79,10 +94,10 @@ def main(page: ft.Page):
                     height=50,
                 ),
                 ft.FilledButton(
-                "사용자 변경하기",
-                width=500,
-                on_click=lambda _: page.go("/"),
-            ),
+                    "사용자 변경하기",
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
@@ -125,10 +140,10 @@ def main(page: ft.Page):
                     height=50,
                 ),
                 ft.FilledButton(
-                "사용자 변경하기",
-                width=500,
-                on_click=lambda _: page.go("/"),
-            ),
+                    "사용자 변경하기",
+                    width=500,
+                    on_click=lambda _: page.go("/"),
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
@@ -146,12 +161,10 @@ def main(page: ft.Page):
         job_related_routes = job_related_check(page)
         retired_routes = retired_check(page)
 
-
         preesent_routes_ex = present_check_ex(page)
         stakeholder_routes_ex = stakeholder_check_ex(page)
         job_related_routes_ex = job_related_check_ex(page)
         retired_routes_ex = retired_check_ex(page)
-
 
         routes.update(present_routes)
         routes.update(preesent_routes_ex)
@@ -176,5 +189,5 @@ def main(page: ft.Page):
     page.go(page.route)
 
 
-ft.app(target=main, assets_dir="assets")
+ft.app(target=main, assets_dir="assets", view=ft.AppView.WEB_BROWSER)
 # %%

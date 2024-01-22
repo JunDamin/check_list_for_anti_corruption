@@ -227,16 +227,12 @@ def present_check_ex(page):
         "/present_declaration_ex",
         [
             ft.AppBar(title=ft.Text("신고조치 필요"), bgcolor=ft.colors.RED),
-            ft.Markdown("선물수수가 불가하여 **신고 조치가 필요**합니다."),
+            ft.Markdown("선물수수가 불가하여 **신고 조치가 필요**합니다.",  auto_follow_links=True
+            ),
             ft.FilledButton(
                 "처음으로",
                 width=500,
                 on_click=lambda _: page.go("/external"),
-            ),
-            ft.FilledButton(
-                "청렴포털 시스템 열기",
-                width=500,
-                on_click=lambda _: page.launch_url("www.clean.go.kr"),
             ),
         ],
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,
