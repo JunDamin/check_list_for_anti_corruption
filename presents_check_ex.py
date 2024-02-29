@@ -212,7 +212,9 @@ def present_check_ex(page):
         "/present_check_ok_ex",
         [
             ft.AppBar(title=ft.Text("선물수수 허용"), bgcolor=ft.colors.GREEN),
-            ft.Markdown("직무관련성이 없는 경우에 한해 1회 100만원 이하의 선물수수가 허용됩니다."),
+            ft.Markdown(
+                "직무관련성이 없는 경우에 한해 1회 100만원 이하의 선물수수가 허용됩니다."
+            ),
             ft.FilledButton(
                 "처음으로",
                 width=500,
@@ -227,7 +229,18 @@ def present_check_ex(page):
         "/present_declaration_ex",
         [
             ft.AppBar(title=ft.Text("신고조치 필요"), bgcolor=ft.colors.RED),
-            ft.Markdown("선물수수가 불가하여 **신고 조치가 필요**합니다.",  auto_follow_links=True
+            ft.Markdown(
+                "선물수수가 불가하여 **신고 조치가 필요**합니다.",
+                auto_follow_links=True,
+            ),
+            ft.Markdown(
+                """
+신고방법: 직무관련자가 사적이해관계자로 확인된 경우, 안 날로 부터 14일 이내 '공공기관 청렴포털 시스템'에 의무신고
+- 퇴직자 사적접촉, 직무관련자와의 거래 행위 등도 그 사실을 '안 날'부터 14일 이내 신고
+※ 상담신고처: 공공기관 청렴포털 시스템(www.clean.go.kr) 혹은 compliance@koica.go.kr
+""",
+                extension_set=ft.MarkdownExtensionSet.GITHUB_WEB,
+                auto_follow_links=True,
             ),
             ft.FilledButton(
                 "처음으로",
