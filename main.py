@@ -98,7 +98,7 @@ def main(page: ft.Page):
                     "외부강의등 체크리스트",
                     width=500,
                     on_click=lambda _: page.go("/lecture_intro1"),
-                    icon=ft.icons.ACCESSIBILITY,
+                    icon=ft.icons.BOOK,
                     height=50,
                 ),
                 ft.FilledButton(
