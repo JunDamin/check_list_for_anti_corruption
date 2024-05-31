@@ -8,6 +8,7 @@ from job_related_check import job_related_check
 from job_related_check_ex import job_related_check_ex
 from retired_check import retired_check
 from retired_check_ex import retired_check_ex
+from lecture_declaration import lecture_check
 
 
 # %%
@@ -93,6 +94,13 @@ def main(page: ft.Page):
                     icon=ft.icons.ACCESSIBILITY,
                     height=50,
                 ),
+                ft.ElevatedButton(
+                    "외부강의등 체크리스트",
+                    width=500,
+                    on_click=lambda _: page.go("/lecture_intro1"),
+                    icon=ft.icons.ACCESSIBILITY,
+                    height=50,
+                ),
                 ft.FilledButton(
                     "사용자 변경하기",
                     width=500,
@@ -160,6 +168,7 @@ def main(page: ft.Page):
         stakeholder_routes = stakeholder_check(page)
         job_related_routes = job_related_check(page)
         retired_routes = retired_check(page)
+        lecture_routes = lecture_check(page)
 
         preesent_routes_ex = present_check_ex(page)
         stakeholder_routes_ex = stakeholder_check_ex(page)
@@ -174,6 +183,7 @@ def main(page: ft.Page):
         routes.update(job_related_routes_ex)
         routes.update(retired_routes)
         routes.update(retired_routes_ex)
+        routes.update(lecture_routes)
 
         page.views.append(routes.get(page.route, "/"))
 
