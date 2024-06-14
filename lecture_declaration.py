@@ -196,7 +196,7 @@ def lecture_check(page):
         "/lecture_check1_a",
         [
             ft.AppBar(
-                title=ft.Text("1. 외부강의등 해당여부"),
+                title=ft.Text("외부강의등 체크리스트"), # "1. 외부강의등 해당여부"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
             ft.Markdown("""
@@ -230,7 +230,7 @@ def lecture_check(page):
         "/lecture_check1_b",
         [
             ft.AppBar(
-                title=ft.Text("1. 외부강의등 해당여부"),
+                title=ft.Text("외부강의등 체크리스트"), # "1. 외부강의등 해당여부"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
             ft.Markdown("""# 나. 직무유관성 판단
@@ -270,7 +270,7 @@ def lecture_check(page):
         "/lecture_check1_c",
         [
             ft.AppBar(
-                title=ft.Text("1. 외부강의등 해당여부"),
+                title=ft.Text("외부강의등 체크리스트"), # "1. 외부강의등 해당여부"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
             ft.Markdown("## 얼마나 연속해서 진행하나요?", width=500),
@@ -301,7 +301,7 @@ def lecture_check(page):
         "/lecture_check1_d",
         [
             ft.AppBar(
-                title=ft.Text("1. 외부강의등 해당여부"),
+                title=ft.Text("외부강의등 체크리스트"), # "1. 외부강의등 해당여부"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
             ft.Markdown("## 어떤 활동인가요?", width=500),
@@ -337,7 +337,7 @@ def lecture_check(page):
         "/lecture_check1_d_1",
         [
             ft.AppBar(
-                title=ft.Text("1. 외부 강의 해당여부"),
+                title=ft.Text("외부강의등 체크리스트"), # "1. 외부 강의 해당여부"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
             ft.Markdown("## 어떤 활동인가요?", width=500),
@@ -404,7 +404,7 @@ def lecture_check(page):
         "/lecture_check1_d_2",
         [
             ft.AppBar(
-                title=ft.Text("1. 외부 강의 해당여부"),
+                title=ft.Text("외부강의등 체크리스트"), # "1. 외부 강의 해당여부"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
             ft.Markdown("## 어떤 활동인가요?", width=500),
@@ -446,7 +446,7 @@ def lecture_check(page):
         "/lecture_check1_d_3",
         [
             ft.AppBar(
-                title=ft.Text("1. 외부 강의 해당여부"),
+                title=ft.Text("외부강의등 체크리스트"), # "1. 외부 강의 해당여부"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
             ft.Markdown("## 어떤 활동인가요?", width=500),
@@ -482,7 +482,7 @@ def lecture_check(page):
         "/lecture_check2_a",
         [
             ft.AppBar(
-                title=ft.Text("2. 외부강의등 신고 의무"),
+                title=ft.Text("외부강의등 체크리스트"), # "2. 외부강의등 신고 의무"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
             ft.Markdown("""## 가. 외부강의등 실시의 대가로서 사례금 수령하나요?
@@ -515,7 +515,7 @@ def lecture_check(page):
         "/lecture_check2_b",
         [
             ft.AppBar(
-                title=ft.Text("2. 외부강의 등 신고 의무"),
+                title=ft.Text("외부강의등 체크리스트"), # "2. 외부강의 등 신고 의무"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
             ft.Markdown("""## 나. 외부강의등 요청기관이 "국가 및 지방자치단체"에 해당하나요?
@@ -553,7 +553,7 @@ def lecture_check(page):
         "/lecture_check31_a",
         [
             ft.AppBar(
-                title=ft.Text("3.1. (외부강의등 미해당) 대체근무 판단"),
+                title=ft.Text("외부강의등 체크리스트"), # "3.1. (외부강의등 미해당) 대체근무 판단"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
             ft.Markdown("""## 가. 청탁금지법상 "외부강의등"에는 해당하지 않으나, 요청기관으로부터 아래 1)~2)에 해당하는 "금품등"을 수수하였습니까?
@@ -589,7 +589,7 @@ def lecture_check(page):
         "/lecture_check31_a_1",
         [
             ft.AppBar(
-                title=ft.Text("3.1. (외부강의등 미해당) 대체근무 판단"),
+                title=ft.Text("외부강의등 체크리스트"), # "3.1. (외부강의등 미해당) 대체근무 판단"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
             ft.Markdown("""## 공직자등은 동일인으로부터 1회 100만원 또는 매 회계연도 300만원을 초과하는 금품등을 제공받을 수 없고, 직무와 관련하여는 대가성 여부를 불문하고 금품등을 제공받을 수 없습니다(청탁금지법 제8조제1항, 제2항 참고). 법령 위반이 의심될 경우 윤리준법팀으로 별도 문의하시기 바랍니다.
@@ -616,7 +616,7 @@ def lecture_check(page):
         "/lecture_check31_b",
         [
             ft.AppBar(
-                title=ft.Text("3.1. (외부강의등 미해당) 대체근무 판단"),
+                title=ft.Text("외부강의등 체크리스트"), # "3.1. (외부강의등 미해당) 대체근무 판단"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
             ft.Markdown("## 나. (서면/대면 여부 무관하게) 근무시간 내 진행되었나요?", width=500),
@@ -648,7 +648,7 @@ def lecture_check(page):
         "/lecture_check31_c",
         [
             ft.AppBar(
-                title=ft.Text("3.1. (외부강의등 미해당) 대체근무 판단"),
+                title=ft.Text("외부강의등 체크리스트"), # "3.1. (외부강의등 미해당) 대체근무 판단"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
             ft.Markdown("## 다. 개인연차를 사용하였나요?", width=500),
@@ -679,7 +679,7 @@ def lecture_check(page):
         "/lecture_check32_a",
         [
             ft.AppBar(
-                title=ft.Text("3.2. (외부강의등 해당하나, 신고의무 없음) 대체근무 판단"),
+                title=ft.Text("외부강의등 체크리스트"), # "3.2. (외부강의등 해당하나, 신고의무 없음) 대체근무 판단"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
             ft.Markdown("## 가. (서면 여부, 대면 여부 무관하게) 근무시간 내 진행되었나요?", width=500),
@@ -711,7 +711,7 @@ def lecture_check(page):
         "/lecture_check32_b",
         [
             ft.AppBar(
-                title=ft.Text("3.2. (외부강의등 해당하나, 신고의무 없음) 대체근무 판단"),
+                title=ft.Text("외부강의등 체크리스트"), # "3.2. (외부강의등 해당하나, 신고의무 없음) 대체근무 판단"),
                 bgcolor=ft.colors.SURFACE_VARIANT,
             ),
             ft.Markdown("## 개인연차를 사용하였나요?", width=500),
