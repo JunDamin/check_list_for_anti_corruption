@@ -15,6 +15,18 @@ from lecture_declaration import lecture_check
 def main(page: ft.Page):
     page.title = "반부패 이해충돌 방지 자가진단 체크리스트"
 
+    ga_code = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D015NNSFP2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D015NNSFP2');
+</script>"""
+    # 헤더에 Google Analytics 코드 추가
+    page.web.append_head(ga_code)
+    
     def route_change(route):
         page.views.clear()
 
