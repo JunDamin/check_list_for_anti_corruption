@@ -24,8 +24,6 @@ def main(page: ft.Page):
 
   gtag('config', 'G-D015NNSFP2');
 </script>"""
-    # 헤더에 Google Analytics 코드 추가
-    page.web.append_head(ga_code)
     
     def route_change(route):
         page.views.clear()
